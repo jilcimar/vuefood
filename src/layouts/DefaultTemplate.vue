@@ -1,30 +1,20 @@
 <template>
     <div>
-        <ul>
-            <li>
-                <router-link :to="{name:'home'}">Home</router-link>
-            </li>
-            <li>
-                <router-link :to="{name:'products'}">Produtos</router-link>
-            </li>
-            <li>
-                <router-link :to="{name:'cart'}">Carrinho</router-link>
-            </li>
-        </ul>
+        <header-component/>
 
-
-        <router-view>
-
-        </router-view>
+        <router-view/>
     </div>
 </template>
 
 <script>
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import HeaderComponent from './_partials/header'
 
 export default {
-    
+    components : {
+        HeaderComponent
+    }
 }
 </script>
 
